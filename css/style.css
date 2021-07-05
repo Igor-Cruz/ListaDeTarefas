@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&family=Roboto+Slab:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(18, 18, 18);
+  font-family: 'Roboto Condensed', Arial, sans-serif;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.todolist {
+  width: 100%;
+  max-width: 600px;
+}
+
+.todolist header {
+  border-top-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  padding: 15px;
+  background-color: rgb(131, 31, 224);
+  color: rgb(184, 184, 184);
+  font-size: 1.3em;
+}
+
+.wrapper-list ul.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper-list ul.list li {
+  position: relative;
+  background-color: rgb(49, 63, 112);
+  border-bottom: 1px solid rgb(29, 37, 70);
+  color: rgb(179, 174, 174);
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  transition: background-color all 300ms ease;
+}
+
+.wrapper-list ul.list li:hover {
+  background-color: #515d92;
+}
+
+.wrapper-list ul.list li:hover button.remove {
+  opacity: 1;
+}
+
+.wrapper-list ul.list .check {
+  background-color: rgb(58, 56, 56);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+  transition: background-color all 200ms ease;
+}
+
+.wrapper-list ul.list .check:hover {
+  background-color: rgb(131, 31, 224);
+}
+
+.wrapper-list button.remove {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  outline: none;
+  background-color: rgb(212, 52, 132);
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.wrapper-list button.remove:after {
+  content: 'x';
+  color: rgb(243, 160, 51);
+  display: block;
+}
+
+.todolist footer {
+  background-color: #1e2547;
+}
+
+.todolist footer input {
+  background-color: #1e2547;
+  border: none;
+  outline: none;
+  width: 90%;
+  padding: 20px;
+  font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  color: white;
+}
